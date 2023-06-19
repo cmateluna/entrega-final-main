@@ -1,0 +1,15 @@
+.danger{
+    /* color: red; */
+    color: #0f314e;
+    border-bottom: 2px solid #84a4c1;
+    height: 33px;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-topleft-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -webkit-border-topright-radius: 10px;
+    position: relative;
+}
+
+.warning{
+    color: yellow;
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "title": "Type O Negative: Dead",
+        "description": "Vinilo (Double Vinyl)",
+        "image": "../images/type.jpg",
+        "price": "38.900",
+        "categoryId": "2",
+        "categoryName": "Vinilo"
+    },
+    {
+        "id": "2",
+        "title": "The Offspring: Greatest Hits",
+        "description": "CD-Audio",
+        "image": "../images/offspring.jpg",
+        "price": "9.900",
+        "categoryId": "1",
+        "categoryName": "Musica"
+    },
+    {
+        "id": "3",
+        "title": "Pantera: Polera Vulgar",
+        "description": "Polera",
+        "image": "../images/polera.png",
+        "price": "15.000",
+        "categoryId": "3",
+        "categoryName": "Polera"
+    },
+    {
+        "id": "4",
+        "title": "David Bowie: Brilliant",
+        "description": "Vinilo",
+        "image": "../images/bowie.jpg",
+        "price": "32.900",
+        "categoryId": "2",
+        "categoryName": "Vinilo"
+    }
+]
