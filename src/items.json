@@ -12,7 +12,7 @@
         "id": "2",
         "title": "The Offspring: Greatest Hits",
         "description": "CD-Audio",
-        "image": "../images/offspring.jpg",
+        "image": "../images/CD-Audio.jpg",
         "price": "9.900",
         "categoryId": "1",
         "categoryName": "Musica"

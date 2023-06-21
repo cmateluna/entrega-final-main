@@ -18,19 +18,6 @@ import CategoryIcon from '@mui/icons-material/Category';
 const siteTheme = createTheme({
     palette: {
         mode: 'light',
-        primary: {
-            light: '#ff7961',
-            main: '#0f314e',
-            dark: '#ba000d',
-            contrastText: '#000000',
-            
-        },
-        secondary: {
-            light: '#757ce8',
-            main: '#3f50b5',
-            dark: '#002884',
-            contrastText: '#FFFFFF',
-        }
     }
 });
 

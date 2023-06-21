@@ -24,12 +24,12 @@ const ItemDetail = ({product}) => {
         <>
             <Grid className="itemDetailContainer__header" container spacing={2}>
                 <Grid xs={8}>
-                    <Typography className="itemDetailContainer__title" variant="h3" color="text.secondary">
+                    <Typography className="itemDetailContainer__title" variant="h4" color="text.secondary">
                         {title}
                     </Typography>
                 </Grid>
                 <Grid xs={4}>
-                    <Typography className="itemDetailContainer__price" variant="h3" color="text.secondary">
+                    <Typography className="itemDetailContainer__price" variant="h4" color="text.secondary">
                         ${price}
                     </Typography>
                 </Grid>

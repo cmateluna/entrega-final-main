@@ -27,8 +27,8 @@ const Home = () => {
         return (
             <>
                 <Box>
-                    <Typography variant="h3" gutterBottom color="text.secondary">
-                        Listado de Productos
+                    <Typography variant="h4" gutterBottom color="text.secondary">
+                        OFERTAS! Más de 500 productos!
                     </Typography>
                 </Box>
                 <ItemList products={products} categoryId={categoryId} />
