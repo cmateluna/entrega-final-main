@@ -1,11 +1,19 @@
 import React from 'react'
+import './Footer.css'
+import Container from "@mui/material/Container";
+import {Paper} from "@mui/material";
 
 const Footer = () => {
+
+
     return (
         <React.Fragment>
-            <footer align="center">
-                Derechos Reservados Carlos Mateluna Brull 2023
-            </footer>
+            <Container className="footer_container" disableGutters={true} maxWidth={false}>
+                <Paper className="footer_content" elevation={5}>
+                    <div className="footer_content__text">Copyright &copy; Carlos Mateluna Brull 2023</div>
+
+                </Paper>
+            </Container>
         </React.Fragment>
     )
 }

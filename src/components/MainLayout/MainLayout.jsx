@@ -35,7 +35,6 @@ const siteTheme = createTheme({
 });
 
 const siteInfo = {
-    "name": "Los Acantos",
     "logo": [imgLogo]
 };
 

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import './Navbar.css';
+// import './NavBar.css';
+import '../NavBar/Navbar.css'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,7 +12,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import CartWidget from "./CartWidget/CartWidget";
-import Navbartitle from "./Navbartitle";
+// import NavBarTitle from "./NavBarTitle";
+import Navbartitle from "../NavBar/Navbartitle";
 import {useNavigate} from "react-router-dom";
 
 function NavBar(props) {

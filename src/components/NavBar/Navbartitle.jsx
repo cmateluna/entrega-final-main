@@ -16,3 +16,4 @@ const NavBarTitle = ({title,logoImage}) => {
     )
 }
 export default NavBarTitle
+

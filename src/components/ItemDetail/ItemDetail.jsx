@@ -1,55 +1,65 @@
-import React from 'react'
+import React, {useContext} from 'react';
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
 import {Divider, Paper} from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+// import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import "../ItemDetail/ItemDetail.css";
-
+import "./ItemDetail.css";
 import {useNavigate} from "react-router-dom";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import useItemCount from "../../hooks/useItemCount";
+import {CartContext} from "../../context/CartProvider";
 
-const ItemDetail = (props) => {
+const ItemDetail = ({product}) => {
 
+    const {addCart} = useContext(CartContext);
     const navigate = useNavigate();
-    const {item} = props;
+    const {count, handleSum, handleRest} = useItemCount();
+    const {id, title, price, image, description} = product;
 
     return (
-        <React.Fragment>
+        <>
             <Grid className="itemDetailContainer__header" container spacing={2}>
                 <Grid xs={8}>
                     <Typography className="itemDetailContainer__title" variant="h3" color="text.secondary">
-                        {item.title}
+                        {title}
                     </Typography>
                 </Grid>
                 <Grid xs={4}>
                     <Typography className="itemDetailContainer__price" variant="h3" color="text.secondary">
-                        ${item.price}
+                        ${price}
                     </Typography>
                 </Grid>
             </Grid>
             <Paper elevation={3}>
                 <CardMedia
                     component="img"
-                    alt={item.title}
+                    alt={title}
                     height="500"
-                    image={item.image}
+                    image={image}
                 />
                 <Typography className="itemDetailContainer__description" variant="body1" gutterBottom color="text.secondary" paragraph={true}>
-                    {item.description}
+                    {description}
                 </Typography>
                 <Divider />
                 <Grid className="itemDetailContainer__footer" container spacing={2}>
                     <Grid xs={8}>
-                        <Button className="itemDetailContainer__goback" onClick={()=>navigate(-1)} size="small" startIcon={<ArrowBackIosIcon />}>Volver atrás</Button>
+                        <Button className="itemDetailContainer__goback" onClick={()=>navigate(-1)} size="small" >Volver Atrás</Button>
                     </Grid>
                     <Grid className="itemDetailContainer__gridCartButton" xs={4}>
-                        <Button href="#text-buttons" size="small" startIcon={<ShoppingCartCheckoutIcon />}>Agregar al Carro</Button>
+                        <Button className="cardActions__restButton" color="secondary" onClick={() => handleRest()}
+                                disabled={count === 1}><ChevronLeftIcon/></Button>
+                        <span>{count}</span>
+                        <Button className="cardActions__sumButton" color="secondary"
+                                onClick={() => handleSum()}><ChevronRightIcon/></Button>
+                        <Button onClick={() => addCart({id, title, description, price, image, count})} href="#" size="small" startIcon={<ShoppingCartCheckoutIcon />}>Agregar al Carro</Button>
                     </Grid>
                 </Grid>
             </Paper>
-        </React.Fragment>
+        </>
     )
 }
 export default ItemDetail

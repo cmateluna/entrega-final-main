@@ -1,6 +1,8 @@
 import {useContext, useState} from 'react'
+//import {collection, getDoc, getDocs, addDoc, doc, where, query} from "firebase/firestore";
 import {collection, getDoc, getDocs, addDoc, doc, where, query} from "firebase/firestore";
-import {db} from "../services/firebase.config";
+//import {db} from "../services/firebase.config";
+import { db } from '../service/firebase.config';
 import {LoaderContext} from "../context/LoaderProvider";
 
 const UseFirebase = () => {
